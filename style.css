@@ -129,54 +129,53 @@ body {
     margin-bottom: 10px;
 }
 
-/* Responsive fix for Mobile */
-@media (max-width: 768px) {
-    .about-flex {
-        flex-direction: column;
-        text-align: center;
-    }
+
+/* Split Layout for Contact Page */
+.contact-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.contact-map {
+    flex: 1; /* Takes up 50% */
+}
+
+.contact-info {
+    flex: 1; /* Takes up 50% */
+    padding: 20px;
 }
 
 .contact-list {
-    list-style: none; /* Removes the bullet points */
+    list-style: none;
     padding: 0;
-    margin: 2rem 0;
 }
 
 .contact-list li {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
 }
 
 .contact-list strong {
+    display: block;
     color: #2c3e50;
-    width: 100px;
-    display: inline-block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.map-container {
-    margin-top: 3rem;
-    border-top: 1px solid #ddd;
-    padding-top: 2rem;
-}.contact-list {
-    list-style: none; /* Removes the bullet points */
-    padding: 0;
-    margin: 2rem 0;
-}
-
-.contact-list li {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-}
-
-.contact-list strong {
-    color: #2c3e50;
-    width: 100px;
-    display: inline-block;
-}
-
-.map-container {
-    margin-top: 3rem;
-    border-top: 1px solid #ddd;
-    padding-top: 2rem;
+/* Mobile Responsive Fix */
+@media (max-width: 850px) {
+    .contact-wrapper {
+        flex-direction: column; /* Stacks map on top of info on small screens */
+    }
+    
+    .contact-map, .contact-info {
+        width: 100%;
+    }
 }
