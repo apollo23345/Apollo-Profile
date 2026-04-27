@@ -108,17 +108,61 @@ body {
     border: 5px solid #3498db;
 }
 
-/* Tools Grid */
-.tools-grid {
-    display: grid;
-    /* Force exactly 3 columns */
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 1.5rem;
-    margin-top: 1rem;
+/* Container for each major section */
+.section-block {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 40px; /* Space between the two containers */
 }
 
-/* IMPORTANT: Mobile Responsive Fix */
-/* On small screens, 3 columns will be too cramped, so we switch to 1 column */
+.block-title {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Achievement Card Tweaks */
+.achievement-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.achievement-card img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Grid Layout (3 Columns) */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Tool Item Tweaks */
+.tool-item {
+    background: #f8f9fa; /* Slightly off-white to stand out from the container */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.tool-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
     .tools-grid {
         grid-template-columns: 1fr;
