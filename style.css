@@ -7,30 +7,32 @@
 }
 
 body {
-    /* 1. base color: Dark, deep space blue */
-    background-color: #030a1a; 
-    color: #f0f0f0; /* Changing main text to bright gray for contrast */
+    /* 1. Set your image here. Make sure the filename matches exactly! */
+    background: url('Images/ScifiBg.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    
+    color: #f0f0f0;
     line-height: 1.6;
     min-height: 100vh;
-    position: relative;
-    overflow-x: hidden;
+    margin: 0;
 }
 
+/* 2. This layer adds the "Blur" and the blue sci-fi tint over your image */
 body::before {
     content: "";
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90vw;
-    height: 90vh;
-    background: radial-gradient(circle, rgba(52, 152, 219, 0.25) 0%, rgba(3, 10, 26, 0) 70%);
-    filter: blur(40px); /* Creates the soft window pane effect */
-    z-index: -1;
-    pointer-events: none;
-    border: 2px solid rgba(52, 152, 219, 0.4); /* The window frame */
-    border-radius: 20px;
-    box-shadow: 0 0 50px rgba(52, 152, 219, 0.3); /* The window's external glow */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* This creates a blue 'glass' tint. Adjust the 0.2 to 0.4 for more/less blue */
+    background: rgba(3, 10, 26, 0.3); 
+    
+    /* THE BLUR: Increase the 8px to 15px if you want it more blurry */
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px); /* For Safari support */
+    
+    z-index: -1; /* Keeps it behind your text/containers */
 }
 
 /* Navbar */
@@ -71,6 +73,12 @@ body::before {
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     margin-bottom: 40px;
+}
+
+.section-block, .contact-wrapper, .about-flex {
+    background: rgba(255, 255, 255, 0.9); /* 90% white, 10% transparent */
+    backdrop-filter: blur(5px); /* Double blur for that frosted glass look */
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Ensure content blocks remain professional and readable */
