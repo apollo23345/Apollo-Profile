@@ -92,3 +92,47 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
+/* About Section Flexbox */
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem 0;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #3498db;
+}
+
+/* Tools Grid */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.tool-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tool-item img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+/* Responsive fix for Mobile */
+@media (max-width: 768px) {
+    .about-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+}
