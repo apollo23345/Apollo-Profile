@@ -3,45 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Portfolio</title>
+    <title>Portfolio | Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <nav class="navbar">
-        <div class="logo">MyWork</div>
+        <div class="logo">MyPortfolio</div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#assignments">Assignments</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="capabilities.html">Capabilities</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <header id="home" class="hero">
-        <h1>Academic Showcase</h1>
-        <p>A collection of my research, code, and projects.</p>
-    </header>
+    <section class="about-section container">
+        <div class="about-flex">
+            <img src="your-photo.jpg" alt="Photo of Me" class="profile-pic">
+            <div class="about-text">
+                <h1>Hi, I'm [Your Name]</h1>
+                <p>I am a student at **TIP (Technological Institute of the Philippines)**. I am currently looking for a job where I can apply and grow my programming skills in real-world environments.</p>
+            </div>
+        </div>
+    </section>
 
-    <main id="assignments" class="container">
-        <div class="grid" id="project-grid">
-            <div class="card" data-category="code">
-                img src="https://via.placeholder.com/300x180" alt="Project 1">
+    <main class="container">
+        <h2 class="section-title">Recent Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://via.placeholder.com/400x250" alt="ELDORADO App">
                 <div class="card-content">
-                    <h3>Data Structures Lab</h3>
-                    <p>Implementation of binary search trees in C++.</p>
-                    <button class="btn">View Details</button>
+                    <h3>ELDORADO Auto Management</h3>
+                    <p>A comprehensive system designed for managing automotive services and inventory efficiently.</p>
                 </div>
             </div>
-            <div class="card" data-category="research">
-                <img src="https://via.placeholder.com/300x180" alt="Project 2">
+            <div class="card">
+                <img src="https://via.placeholder.com/400x250" alt="DevDash Game">
                 <div class="card-content">
-                    <h3>Ethics in AI</h3>
-                    <p>A research paper on algorithmic bias in hiring.</p>
-                    <button class="btn">Read Paper</button>
+                    <h3>DevDash Game</h3>
+                    <p>An interactive game developed to challenge logic and programming concepts.</p>
                 </div>
             </div>
         </div>
     </main>
-
-    <script src="script.js"></script>
 </body>
 </html>
