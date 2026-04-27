@@ -110,6 +110,33 @@ body::before {
     color: #333; /* Dark text inside the light boxes */
 }
 
+/* Removes default link styling for the whole-card link */
+.project-link {
+    text-decoration: none;
+    color: inherit; /* Keeps your text dark/gray instead of turning blue */
+    display: block;
+}
+
+/* Sci-fi Glow Button (For Option 2) */
+.btn-glow {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: transparent;
+    color: #3498db;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+    background: #3498db;
+    color: white;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.7);
+}
+
 .block-title {
     margin-bottom: 25px;
     color: #2c3e50;
