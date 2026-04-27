@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #f4f7f6;
+    background-color: #f4f7f6; /* Light gray background for the whole site */
     color: #333;
     line-height: 1.6;
 }
@@ -36,217 +36,121 @@ body {
     margin-left: 20px;
 }
 
-/* Hero Section */
-.hero {
-    height: 40vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1200x400');
-    background-size: cover;
-    color: white;
-    text-align: center;
-}
-
-/* Responsive Grid */
+/* Container for all pages */
 .container {
     padding: 2rem 5%;
+    max-width: 1200px; /* Keeps the content from getting too wide */
+    margin: 0 auto;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-/* Cards */
-.card {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card img {
-    width: 100%;
-    display: block;
-}
-
-.card-content {
-    padding: 1.5rem;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background: #3498db;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-/* About Section Flexbox */
-.about-flex {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    padding: 3rem 0;
-}
-
-.profile-pic {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #3498db;
-}
-
-/* Container for each major section */
+/* Section Blocks (The white containers for Capabilities) */
 .section-block {
-    background: white;
-    padding: 30px;
+    background: white; /* White "box" for each section */
+    padding: 40px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    margin-bottom: 40px; /* Space between the two containers */
+    margin-bottom: 40px;
 }
 
 .block-title {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: #2c3e50;
-    border-bottom: 2px solid #3498db;
+    border-bottom: 3px solid #3498db;
     display: inline-block;
     padding-bottom: 5px;
+    font-size: 1.8rem;
 }
 
-/* Achievement Card Tweaks */
-.achievement-card {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
+/* Achievement Card */
 .achievement-card img {
     width: 100%;
-    max-height: 400px;
+    max-height: 500px;
     object-fit: cover;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-/* Grid Layout (3 Columns) */
+/* Tools Grid - Fixed to 3 Columns */
 .tools-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 25px;
 }
 
-/* Tool Item Tweaks */
 .tool-item {
-    background: #f8f9fa; /* Slightly off-white to stand out from the container */
-    padding: 20px;
-    border-radius: 10px;
+    background: #f8f9fa; /* Light gray inside the white block */
+    padding: 2rem;
+    border-radius: 12px;
     text-align: center;
     border: 1px solid #eee;
-}
-
-.tool-item img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    margin-bottom: 10px;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .tools-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.tool-item {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    /* Ensures all items have the same height */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.tool-item:hover {
+    transform: translateY(-5px);
 }
 
 .tool-item img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 15px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
+    margin-bottom: 15px;
 }
 
-/* Split Layout for Contact Page */
+/* Contact Page Split Layout */
 .contact-wrapper {
     display: flex;
     gap: 40px;
-    align-items: flex-start;
-    margin-top: 30px;
     background: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
-.contact-map {
-    flex: 1; /* Takes up 50% */
-}
-
-.contact-info {
-    flex: 1; /* Takes up 50% */
-    padding: 20px;
+.contact-map, .contact-info {
+    flex: 1;
 }
 
 .contact-list {
     list-style: none;
-    padding: 0;
 }
 
 .contact-list li {
-    margin-bottom: 20px;
-    font-size: 1.2rem;
+    margin-bottom: 25px;
 }
 
 .contact-list strong {
     display: block;
     color: #2c3e50;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .contact-list a {
-    text-decoration: none;
     color: #3498db;
-    word-break: break-word; /* Ensures long addresses don't break the layout */
-    transition: color 0.3s ease;
+    text-decoration: none;
 }
 
-.contact-list a:hover {
-    color: #2c3e50;
-    text-decoration: underline;
-}
-
-/* Mobile Responsive Fix */
-@media (max-width: 850px) {
-    .contact-wrapper {
-        flex-direction: column; /* Stacks map on top of info on small screens */
+/* RESPONSIVE FIXES */
+@media (max-width: 900px) {
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
     }
-    
-    .contact-map, .contact-info {
-        width: 100%;
+    .contact-wrapper {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .tools-grid {
+        grid-template-columns: 1fr; /* 1 column on phones */
+    }
+    .about-flex {
+        flex-direction: column;
+        text-align: center;
     }
 }
