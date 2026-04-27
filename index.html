@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">MyWork</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#assignments">Assignments</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <h1>Academic Showcase</h1>
+        <p>A collection of my research, code, and projects.</p>
+    </header>
+
+    <main id="assignments" class="container">
+        <div class="grid" id="project-grid">
+            <div class="card" data-category="code">
+                img src="https://via.placeholder.com/300x180" alt="Project 1">
+                <div class="card-content">
+                    <h3>Data Structures Lab</h3>
+                    <p>Implementation of binary search trees in C++.</p>
+                    <button class="btn">View Details</button>
+                </div>
+            </div>
+            <div class="card" data-category="research">
+                <img src="https://via.placeholder.com/300x180" alt="Project 2">
+                <div class="card-content">
+                    <h3>Ethics in AI</h3>
+                    <p>A research paper on algorithmic bias in hiring.</p>
+                    <button class="btn">Read Paper</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
