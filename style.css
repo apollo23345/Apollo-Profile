@@ -169,6 +169,18 @@ body {
     letter-spacing: 1px;
 }
 
+.contact-list a {
+    text-decoration: none;
+    color: #3498db;
+    word-break: break-word; /* Ensures long addresses don't break the layout */
+    transition: color 0.3s ease;
+}
+
+.contact-list a:hover {
+    color: #2c3e50;
+    text-decoration: underline;
+}
+
 /* Mobile Responsive Fix */
 @media (max-width: 850px) {
     .contact-wrapper {
