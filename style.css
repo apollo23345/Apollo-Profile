@@ -111,24 +111,39 @@ body {
 /* Tools Grid */
 .tools-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Force exactly 3 columns */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 1.5rem;
     margin-top: 1rem;
 }
 
+/* IMPORTANT: Mobile Responsive Fix */
+/* On small screens, 3 columns will be too cramped, so we switch to 1 column */
+@media (max-width: 768px) {
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .tool-item {
     background: white;
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    /* Ensures all items have the same height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .tool-item img {
     width: 50px;
-    margin-bottom: 10px;
+    height: 50px;
+    margin-bottom: 15px;
+    object-fit: contain;
 }
-
 
 /* Split Layout for Contact Page */
 .contact-wrapper {
